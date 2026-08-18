@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For Kashoo — I'm Sorry</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <main class="stage">
+    <div class="card" id="card" role="region" aria-label="Apology card for Kashoo">
+      <div class="top-row">
+        <div class="title-wrap">
+          <h1 class="title">Kashoo</h1>
+          <p class="tag">My heart speaks—please listen</p>
+        </div>
+        <button id="playChord" class="icon-btn" title="Play a gentle chord" aria-pressed="false">♪</button>
+      </div>
+
+      <div class="photo" id="photoPreview" aria-hidden="true">
+        <span class="photo-placeholder">Your photo here</span>
+      </div>
+
+      <div class="controls">
+        <button id="revealBtn" class="btn primary">Open My Apology</button>
+        <button id="roseBtn" class="btn">Send a Rose</button>
+        <input id="fileInput" type="file" accept="image/*" class="file" aria-label="Upload a photo to show" />
+      </div>
+
+      <div id="apology" class="apology hidden" aria-live="polite">
+        <pre id="typing" class="typing" aria-hidden="false"></pre>
+
+        <div class="promises">
+          <h3>Promises I mean:</h3>
+          <ul id="promiseList">
+            <li><label><input type="checkbox"> I will listen more carefully</label></li>
+            <li><label><input type="checkbox"> I will be honest and open</label></li>
+            <li><label><input type="checkbox"> I will make it up to you, every day</label></li>
+          </ul>
+          <div class="ask-row">
+            <p class="ask">Will you forgive me?</p>
+            <div class="answer-btns">
+              <button id="forgiveYes" class="btn yes">Yes</button>
+              <button id="forgiveNo" class="btn no">Not yet</button>
+            </div>
+          </div>
+          <p class="sign">With love, <span id="signName">[Your Name]</span></p>
+        </div>
+      </div>
+
+      <div class="secret">
+        <label for="codeInput">Enter a secret to surprise her</label>
+        <input id="codeInput" placeholder="Type something sweet..." />
+      </div>
+    </div>
+  </main>
+
+  <div id="confetti-layer" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
